@@ -1,4 +1,4 @@
-# BOOLEAN_FUNCTION_MINIMIZATION
+  # BOOLEAN_FUNCTION_MINIMIZATION
 
 **AIM:**
 
@@ -16,7 +16,7 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Theory**
 
-**Logic Diagram**
+Implementing Boolean functions in Verilog HDL (Hardware Description Language) involves translating the simplified Boolean expressions into Verilog code to describe the behavior of digital circuits. The basic building blocks in Verilog is module. The module represent a combinational circuit. Use logical operators (&, |, ~, ^) to implement Boolean functions directly. Use built-in gate primitives for basic functions. Use University program VWF to verify the functionality of your Verilog modules. Create waveform and check outputs against expected results
 
 **Procedure**
 
@@ -34,17 +34,37 @@ Hardware – PCs, Cyclone II , USB flasher
 **Program:**
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+```
+module minimization(a, b, c, d, w, x, y, z, f1, f2);
+ input a, b, c, d, w, x, y, z;
+ output f1, f2;
+ wire x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
+ assign x1 = (~a) & (~b) & (~c) & (~d);
+ assign x2 = (a) & (~c) & (~d);
+ assign x3 = (~b) & (c) & (~d);
+ assign x4 = (~a) & (b) & (c) & (d);
+ assign x5 = (b) & (~c) & (d);
+ assign f1 = x1 | x2 | x3 | x4 | x5;
+ assign x6 = (x) & (~y) & (z);
+ assign x7 = (~x) & (~y) & (z);
+ assign x8 = (~w) & (x) & (y);
+ assign x9 = (w) & (~x) & (y);
+ assign x10 = (w) & (x) & (y);
+ assign f2 = x6 | x7 | x8 | x9 | x10;
+ endmodule
 
-Developed by: RegisterNumber:*/
+```
+Developed by:sharan I
+
+RegisterNumber:24010956
 
 
 **RTL realization**
+![exp-2-d](https://github.com/user-attachments/assets/b2b2eeea-4ed4-44f8-896a-4f8e0bbdea87)
 
-**Output:**
-
-**RTL**
 
 **Timing Diagram**
+![exp-2-w](https://github.com/user-attachments/assets/044d1907-a69c-442a-bd53-dfa054a775c5)
 
 **Result:**
 
